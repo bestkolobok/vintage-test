@@ -13,4 +13,13 @@ Vue.use(Vuetify, {
     warning: '#FFC107'
   },
   iconfont: 'md',
+  breakpoint: {
+      thresholds: {
+          xs: 480,
+          sm: 720,
+          md: 960,
+          lg: 1264
+      },
+      // scrollbarWidth: 10
+  }
 })
