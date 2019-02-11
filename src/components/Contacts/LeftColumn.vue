@@ -19,7 +19,9 @@
                     </ul>
                 </div>
                 <div class="left-column__left-block-phone green-text">
-                    {{ phone }}
+                    <a :href="'tel:' + phone">
+                        {{ phone | FormatPhone}}
+                    </a>
                 </div>
             </v-flex>
             <v-flex
@@ -37,7 +39,9 @@
                         {{ item.title }}
                     </v-flex>
                     <v-flex class="left-column__right-block-text-line-text green-text" xs12>
-                        {{ item.text }}
+                        <a :href="item.link">
+                            {{ item.text }}
+                        </a>
                     </v-flex>
                 </v-layout>
             </v-flex>
@@ -50,11 +54,11 @@
         name: "LeftColumn",
         data: function () {
             return {
-                phone: '+41 41 544 62 00',
+                phone: '+41415446200',
                 rightBlockLines: [
-                    {title: 'Email', text: 'info@gms-worldwide.com'},
-                    {title: 'Send message', text: 'Viber us'},
-                    {title: 'Send form', text: 'Contact us'}
+                    {title: 'Email', text: 'info@gms-worldwide.com', link: 'mailto:info@gms-worldwide.com'},
+                    {title: 'Send message', text: 'Viber us', link: 'viber://chat?number=+41415446200'},
+                    {title: 'Send form', text: 'Contact us', link: '#feedback'}
                 ],
                 leftBlockList: [
                     'Global Message Services Ukraine LLC',
@@ -85,6 +89,7 @@
         &__left-block-phone{
             margin-top: 14px;
             font-size: 1.8em;
+            cursor: pointer;
         }
         &__right-block{
             &--mobile{

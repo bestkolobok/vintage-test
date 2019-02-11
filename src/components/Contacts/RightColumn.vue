@@ -8,7 +8,9 @@
                 {{ text }}
             </div>
             <div class="right-column__phone green-text">
-                {{ phone }}
+                <a :href="'tel:' + phone">
+                    {{ phone | FormatPhone}}
+                </a>
             </div>
         </v-layout>
     </section>
@@ -22,7 +24,7 @@
                 text: 'GMS understands that it can be hard to follow all new technologies. ' +
                 'We regularly provide for all our clients educational trainings to make your operator`s ' +
                 'business earn more and better though our best practices.',
-                phone: '+41 41 544 62 06'
+                phone: '+41415446206'
             }
         },
     }
@@ -43,6 +45,7 @@
         &__phone{
             margin-top: 14px;
             font-size: 1.8em;
+            cursor: pointer;
         }
     }
 </style>
