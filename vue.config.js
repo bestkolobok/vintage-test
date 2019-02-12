@@ -1,5 +1,5 @@
 module.exports = {
-    // assetsDir: 'static',
+    assetsDir: '',
     runtimeCompiler: true,
     css: {
         loaderOptions: {

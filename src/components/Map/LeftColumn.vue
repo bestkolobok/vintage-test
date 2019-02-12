@@ -84,7 +84,7 @@
         padding: 70px 50px 90px;
         color: white;
         &--mobile{
-            padding-bottom: 10px;
+            padding: 70px 25px 10px;
         }
         &__title{
             font-weight: normal;

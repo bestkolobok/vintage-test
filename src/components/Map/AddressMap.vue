@@ -1,20 +1,22 @@
 <template>
     <section class="address-map">
         <GmapMap
+                class="address-map__google-map"
                 :center="position"
-                :zoom="15"
+                :zoom="14"
                 map-type-id="terrain"
                 style="width: 100%; height: 536px"
                 :options="options"
         >
             <GmapMarker
-                    :key="index"
+                    class="address-map__google-map-marker"
                     v-for="(m, index) in markers"
+                    :key="index"
                     :position="m.position"
                     :clickable="true"
                     :draggable="true"
                     @click="onMarkerClick"
-                    icon="<i>close</i>"
+                    :icon= "'/marker.png'"
             />
         </GmapMap>
     </section>
@@ -235,7 +237,6 @@
                         ]
                 },
                 position: {},
-
             }
         },
         methods: {
@@ -258,5 +259,10 @@
 </script>
 
 <style scoped lang="scss">
-
+    .address-map{
+        &__google-map{
+            width: 100%;
+            height: 536px;
+        }
+    }
 </style>

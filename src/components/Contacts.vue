@@ -17,7 +17,8 @@
             <v-flex
                     class="contacts__right-column contacts__column"
                     :class="{'contacts__column--column': $vuetify.breakpoint.mdAndDown}"
-                    xs12 sm6>
+                    xs12 sm6
+            >
               <right-column/>
             </v-flex>
         </v-layout>
