@@ -1,9 +1,9 @@
 <template>
   <main class="home">
     <div class="wrapper">
-      <a-contacts />
-      <a-map />
-      <a-feedback />
+      <a-contacts  id="contacts"/>
+      <a-map  id="map"/>
+      <a-feedback id="feedback"/>
     </div>
   </main>
 </template>
